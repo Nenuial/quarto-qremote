@@ -162,7 +162,7 @@
     });
   }
 
-  // Steady tick, in a Worker if possible (not throttled in background tabs)
+  // Steady tick, in a Worker if possible (not throttled in hidden windows)
   function startTicker(fn) {
     try {
       var src = 'setInterval(function(){postMessage(0)},100);';
@@ -347,10 +347,15 @@
         postState();
       }).catch(function () { /* relay not running: try again later */ });
     }
-    if (relayURL) {
-      connectRelay();
-      setInterval(function () { if (!es) connectRelay(); else postState(); }, 3000);
+    // Heartbeat every 3 s, driven by the Worker tick below: plain timers are
+    // throttled to once a minute when the window is hidden or covered.
+    var lastBeat = 0;
+    function heartbeat() {
+      if (!relayURL || Date.now() - lastBeat < 3000) return;
+      lastBeat = Date.now();
+      if (!es) connectRelay(); else postState();
     }
+    if (relayURL) connectRelay();
     deck.on('fragmentshown', postState);
     deck.on('fragmenthidden', postState);
 
@@ -380,7 +385,7 @@
       presentationStart = slideStart;
       started = true;
     }
-    startTicker(draw);
+    startTicker(function () { draw(); heartbeat(); });
   }
 
   window.QRemote = window.QRemote || {
