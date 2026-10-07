@@ -1,0 +1,35 @@
+---
+title: "QRemote example"
+subtitle: "Control this deck from your iPhone or Apple Watch"
+format:
+  revealjs:
+    revealjs-plugins: [qremote]
+    embed-resources: true
+qremote:
+  # Slides without a `timing` attribute count up. Set e.g. 30 to give them 30 s.
+  default-timing: null
+---
+
+## Timed slide {timing="20"}
+
+This slide has 20 seconds. The watch buzzes lightly 5 seconds before the end, then twice at 0:00.
+
+::: {.notes}
+Notes appear on the iPhone remote and in the speaker view (S key).
+:::
+
+## Two steps {timing="1:00"}
+
+The first tap on **Next** shows the next fragment…
+
+::: {.fragment}
+…then the next tap goes to the next slide.
+:::
+
+## Untimed slide
+
+No `timing` here: the remotes show the time spent on this slide instead of a countdown.
+
+## Thank you {timing="15"}
+
+Press **P** to pause the countdown, **R** to reset the clocks.

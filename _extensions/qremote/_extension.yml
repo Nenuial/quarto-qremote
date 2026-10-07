@@ -1,0 +1,20 @@
+title: QRemote
+author: Pascal Burkhard
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  revealjs-plugins:
+    - name: QRemote
+      script: qremote.js
+      config:
+        qremote:
+          # Address of the QRemote Relay Mac app (false = no remote control)
+          relay: "http://localhost:8765"
+          # Time for slides without a `timing` attribute: seconds or "m:ss".
+          # Leave empty so those slides count up instead of down.
+          default-timing: null
+          # The title slide (and any slide with class .standby) is not timed:
+          # the presentation clock starts when you leave it.
+          title-slide-standby: true
+          # Countdown in the speaker view (S key)
+          speaker-view: true

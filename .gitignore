@@ -1,0 +1,6 @@
+# Quarto output
+/*.html
+/*_files/
+/.quarto/
+
+.DS_Store
