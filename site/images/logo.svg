@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#2f2b48"/>
+      <stop offset="1" stop-color="#191724"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="260" y1="230" x2="760" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9ccfd8"/>
+      <stop offset="1" stop-color="#c4a7e7"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="600" y1="600" x2="820" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#eb6f92"/>
+      <stop offset="1" stop-color="#f6c177"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <!-- bowl of the Q = countdown ring, open where the tail passes -->
+  <path d="M 613.6 751.3 A 260 260 0 1 1 751.3 613.6" fill="none" stroke="url(#ring)" stroke-width="92" stroke-linecap="round"/>
+  <!-- tail of the Q = forward stroke -->
+  <path d="M 648 648 L 796 796" fill="none" stroke="url(#tail)" stroke-width="92" stroke-linecap="round"/>
+  <!-- next / play -->
+  <path d="M 456 430 L 456 594 L 584 512 Z" fill="#e0def4" stroke="#e0def4" stroke-width="40" stroke-linejoin="round"/>
+</svg>

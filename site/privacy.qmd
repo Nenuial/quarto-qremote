@@ -1,0 +1,51 @@
+---
+title: "Privacy policy"
+description: "QRemote, QRemote Relay and the qremote extension collect no data."
+date: 2026-10-07
+date-format: "D MMMM YYYY"
+date-meta: 2026-10-07
+toc: false
+---
+
+[Version française](privacy-fr.qmd)
+
+This policy covers the **QRemote** app for iPhone and Apple Watch, the **QRemote Relay** app for Mac, the **qremote** Quarto extension, and this website, qremote.nenuial.org. They are made by Pascal Burkhard, who is responsible for this policy.
+
+## In short
+
+QRemote, QRemote Relay and the qremote extension **collect no personal data**. There are no accounts, no analytics, no advertising and no tracking. Everything they exchange stays on your own devices and your local network, and none of it is sent to us or to anyone else.
+
+## The apps and the extension
+
+**On your local network.** The iPhone and Apple Watch apps talk only to QRemote Relay on your own Mac, over your local network, and QRemote Relay talks only to the presentation open in a browser on that same Mac. They exchange:
+
+- the state of the presentation: slide number, timings, presentation and slide titles, speaker notes;
+- your commands: next, previous, pause, reset.
+
+This information is not stored, and never leaves your local network.
+
+**On your devices.** The apps keep their settings on your devices: the name and network addresses of your Mac, the optional PIN, and your buzz preference. The iPhone passes these settings to your Apple Watch. Deleting the apps deletes them.
+
+**Local network access.** iOS and macOS ask your permission before the apps use the local network. It is only used to find QRemote Relay and to talk to it.
+
+**App Store.** Apple provides the App Store, TestFlight and their statistics under its own [privacy policy](https://www.apple.com/legal/privacy/). If you allow it in your device's settings, Apple may share anonymous crash reports and usage statistics with developers; they contain no personal data.
+
+## This website
+
+This website is a set of static pages served from our own web server. It sets **no cookies**, uses **no analytics**, and loads **nothing from other websites** (no web fonts, no scripts, no embedded content).
+
+Like any web server, it may keep technical access logs (IP address, date and time, page requested, browser) to operate and protect the site. These logs are not used for anything else and are not shared.
+
+Links to other sites, such as GitHub or the App Store, are subject to those sites' own policies.
+
+## Your rights
+
+Since the apps and the extension hold no personal data about you, there is nothing to access, correct or delete. For anything about this policy or the website's logs, contact us below.
+
+## Changes
+
+If this policy changes, the new version will be published on this page with its date.
+
+## Contact
+
+Pascal Burkhard: [open an issue on GitHub](https://github.com/Nenuial/quarto-qremote/issues).

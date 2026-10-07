@@ -1,0 +1,39 @@
+---
+title: "Support"
+description: "Help with QRemote, QRemote Relay and the qremote Quarto extension."
+---
+
+Something does not work, or you have an idea? [Open an issue on GitHub](https://github.com/Nenuial/quarto-qremote/issues). Please mention your devices and their system versions (iPhone, Apple Watch, Mac), and your Quarto version (`quarto --version`).
+
+## Connection
+
+| Problem | What to check |
+|---|---|
+| The Mac is not in the iPhone's list | QRemote Relay is running on the Mac? iPhone and Mac on the same network? iPhone › Settings › Privacy & Security › Local Network › QRemote is on? Otherwise scan the code in the QRemote Relay menu with the Camera app, or type the address shown under *Show addresses*. |
+| "Relay unreachable" | Same as above. Many school, university and conference Wi-Fi networks keep devices from seeing each other: put the Mac on your iPhone's Personal Hotspot. |
+| "No presentation open" | The presentation is open on the **same Mac** as QRemote Relay, and uses `revealjs-plugins: [qremote]`? Reload the page. |
+| "PIN refused" | Enter the PIN shown in the QRemote Relay menu (iPhone › ⚙︎ › PIN). |
+| The watch does not find the Mac | Choose the Mac in the iPhone app first: the watch receives its settings from the iPhone. |
+| Chrome asks about "local network access" | Allow it: the presentation talks to QRemote Relay on this Mac. |
+| QRemote Relay: "Port 8765 is already in use" | Another app uses that port. Quit it, then click *Try again* in the menu. |
+
+## Apple Watch
+
+| Problem | What to check |
+|---|---|
+| Double tap does nothing | Double tap needs an Apple Watch Series 9, Ultra 2 or later, with watchOS 11, and QRemote on screen. The **Next** button works on every watch. |
+| No buzz with the wrist down | Watch › second page › Settings › Session should say "Active"; otherwise tap *Restart session*. A session lasts up to one hour. |
+| QRemote is gone when I raise my wrist | iPhone › Watch app › General › Return to Clock › QRemote › *After 1 hour*. |
+
+## Quarto {#quarto}
+
+| Problem | Solution |
+|---|---|
+| `Cannot convert undefined or null to object` when rendering | The YAML header has a `qremote:` key with nothing under it (all options commented out). Remove the key, or keep one option. |
+| `YAML file qremote/plugin.yml not found` | The folder you run `quarto` from contains a folder named `qremote` (in any case). Quarto takes it for the plugin: run `quarto` from another folder. Also check that `_extensions/qremote` is next to the presentation, or in the root of its Quarto project. |
+| No countdown in the speaker view | Open the speaker view from the presentation (<kbd>S</kbd>). If the presentation was reloaded, close the speaker view and press <kbd>S</kbd> again. |
+| <kbd>P</kbd> goes to the previous slide | The extension is not loaded: check `revealjs-plugins: [qremote]` and that `_extensions/qremote` exists. |
+
+## Privacy
+
+QRemote collects no data. [Privacy policy](privacy.qmd) · [Politique de confidentialité](privacy-fr.qmd).

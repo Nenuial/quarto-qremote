@@ -1,0 +1,84 @@
+/*-- scss:rules --*/
+
+// Page components, for both themes (uses the $rp-* palette of the active theme)
+
+:root {
+  --qr-surface: #{$rp-surface};
+  --qr-overlay: #{$rp-overlay};
+  --qr-subtle: #{$rp-subtle};
+  --qr-iris: #{$rp-iris};
+  --qr-rose: #{$rp-rose};
+  --qr-foam: #{$rp-foam};
+  --qr-line: #{$rp-highlight-med};
+  --qr-hero: linear-gradient(100deg, #{$rp-foam} 0%, #{$rp-iris} 55%, #{$rp-rose} 100%);
+}
+
+// ---------- Home page
+.qr-hero {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+}
+.qr-hero img.qr-logo { width: 112px; height: 112px; border-radius: 24px; margin-bottom: 1rem; }
+.qr-hero .qr-title {
+  display: block;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  background: var(--qr-hero);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border: none;
+}
+.qr-hero .qr-tagline {
+  display: block; font-size: 1.25rem; color: var(--qr-subtle); max-width: 40rem; margin: 0 auto 1.5rem; }
+.qr-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.qr-buttons a.btn { border-radius: 999px; padding: 0.5rem 1.25rem; font-weight: 600; }
+
+// Cards (three parts, features)
+.qr-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.qr-card {
+  background: var(--qr-surface);
+  border: 1px solid var(--qr-line);
+  border-radius: 16px;
+  padding: 1.1rem 1.2rem;
+}
+.qr-card h3 { margin-top: 0.2rem; font-size: 1.15rem; border: none; }
+.qr-card p:last-child { margin-bottom: 0; }
+.qr-card .qr-icon {
+  display: block; font-size: 1.6rem; color: var(--qr-iris); }
+
+// Screenshots
+.qr-shots { display: flex; gap: 1.25rem; justify-content: center; align-items: flex-end; flex-wrap: wrap; margin: 1.5rem 0; }
+.qr-shots figure { margin: 0; text-align: center; }
+.qr-shots figcaption { font-size: 0.85rem; color: var(--qr-subtle); margin-top: 0.4rem; }
+img.qr-phone { width: 230px; border-radius: 30px; border: 1px solid var(--qr-line); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); }
+img.qr-watch { width: 150px; }
+img.qr-mac { width: 100%; max-width: 900px; }
+img.qr-panel { width: 300px; border-radius: 12px; }
+
+// Steps
+.qr-steps { counter-reset: step; list-style: none; padding-left: 0; }
+.qr-steps > li { counter-increment: step; position: relative; padding-left: 2.6rem; margin-bottom: 0.9rem; }
+.qr-steps > li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.1rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 0.95rem;
+  background: var(--qr-iris); color: #{$rp-base};
+}
+
+// Small print (store badges to come, last updated…)
+.qr-note { color: var(--qr-subtle); font-size: 0.9rem; }
+
+kbd {
+  background: var(--qr-overlay);
+  color: inherit;
+  border: 1px solid var(--qr-line);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  padding: 0.05rem 0.4rem;
+  font-size: 0.85em;
+}

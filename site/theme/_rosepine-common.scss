@@ -1,0 +1,43 @@
+// Shared by rosepine-dawn.scss and rosepine-moon.scss, which set the $rp-* palette first.
+
+// No web fonts: the site makes no third-party requests (see the privacy policy)
+$web-font-path: false;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+$body-bg: $rp-base;
+$body-color: $rp-text;
+$body-secondary-color: $rp-subtle;
+$headings-color: $rp-text;
+$link-color: $rp-accent;
+$link-hover-color: $rp-love;
+$primary: $rp-accent;
+$secondary: $rp-subtle;
+$success: $rp-pine;
+$info: $rp-foam;
+$warning: $rp-gold;
+$danger: $rp-love;
+$light: $rp-surface;
+$dark: $rp-text;
+$border-color: $rp-highlight-med;
+$hr-border-color: $rp-highlight-med;
+
+$navbar-bg: $rp-surface;
+$navbar-fg: $rp-text;
+$navbar-hl: $rp-accent;
+$footer-bg: $rp-base;
+$footer-fg: $rp-subtle;
+$sidebar-bg: $rp-base;
+$toc-color: $rp-subtle;
+
+$code-color: $rp-love;
+$code-bg: $rp-overlay;
+$code-block-bg: $rp-surface;
+$code-block-border-left: $rp-iris;
+$table-border-color: $rp-highlight-med;
+
+$callout-color-note: $rp-pine;
+$callout-color-tip: $rp-foam;
+$callout-color-important: $rp-iris;
+$callout-color-caution: $rp-rose;
+$callout-color-warning: $rp-gold;

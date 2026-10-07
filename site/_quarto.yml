@@ -1,0 +1,53 @@
+# QRemote website: https://qremote.nenuial.org
+#   quarto preview      (in this folder)
+#   quarto render       → _site/, a static site: upload its contents to the web server
+project:
+  type: website
+
+website:
+  title: "QRemote"
+  site-url: https://qremote.nenuial.org
+  description: "Slide timing and iPhone / Apple Watch remote control for Quarto reveal.js presentations."
+  favicon: images/favicon.png
+  repo-url: https://github.com/Nenuial/quarto-qremote
+  repo-actions: [issue]
+  page-navigation: true
+  navbar:
+    logo: images/logo.png
+    logo-alt: "QRemote logo"
+    left:
+      - text: Quarto extension
+        href: extension.qmd
+      - text: Apps
+        href: apps.qmd
+      - text: Demo
+        href: demo.qmd
+      - text: Support
+        href: support.qmd
+    right:
+      - icon: github
+        href: https://github.com/Nenuial/quarto-qremote
+        aria-label: GitHub
+  page-footer:
+    left: "© 2026 Pascal Burkhard · QRemote"
+    right:
+      - text: Privacy
+        href: privacy.qmd
+      - text: Confidentialité
+        href: privacy-fr.qmd
+      - text: Support
+        href: support.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme/rosepine-dawn.scss, theme/site.scss]
+      dark: [cosmo, theme/rosepine-moon.scss, theme/site.scss]
+    respect-user-color-scheme: true
+    highlight-style: a11y
+    toc: true
+    toc-depth: 2
+    link-external-newwindow: true
+    # Everything is served from this site: no third-party requests
+    anchor-sections: true
+    smooth-scroll: true

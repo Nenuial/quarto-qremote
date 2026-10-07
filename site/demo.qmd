@@ -1,0 +1,41 @@
+---
+title: "QRemote demo"
+subtitle: "Press S for the speaker view, then → to start"
+format:
+  revealjs:
+    theme: dark
+    revealjs-plugins: [qremote]
+    slide-number: c/t
+    show-slide-number: speaker
+# On the public website: no link to QRemote Relay (it would ask browsers for local network access)
+qremote:
+  relay: false
+---
+
+## A timed slide {timing="20"}
+
+This slide has **20 seconds**. Open the speaker view with <kbd>S</kbd>: the countdown is under the clock, and turns red at 0:00.
+
+::: {.notes}
+These notes show in the speaker view, and on the iPhone remote.
+:::
+
+## Two steps {timing="0:40"}
+
+With the remotes, the first **Next** shows the next step…
+
+::: {.fragment}
+…and the second goes to the next slide. The iPhone and the watch show one dot per step.
+:::
+
+## An untimed slide
+
+No `timing` here: the speaker view shows the time spent on this slide instead of a countdown.
+
+## Pause and reset {timing="15"}
+
+<kbd>P</kbd> pauses the countdown, <kbd>R</kbd> resets the clocks. [Back to the website](index.html){target="_top"}
+
+::: {.notes}
+In a rehearsal, P is handy to stop the clock while you think.
+:::

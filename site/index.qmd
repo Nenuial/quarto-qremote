@@ -1,0 +1,91 @@
+---
+pagetitle: "QRemote: remote control for Quarto presentations"
+description: "Next slide with a double tap on your Apple Watch, a buzz when time is up, your speaker notes on your iPhone. For Quarto reveal.js presentations."
+toc: false
+page-layout: article
+---
+
+::: {.qr-hero}
+![](images/logo.png){.qr-logo fig-alt="QRemote logo"}
+
+[QRemote]{.qr-title role="heading" aria-level="1"}
+
+[Time your slides, and drive your Quarto presentations from your iPhone and Apple Watch: next slide with a double tap, a buzz when time is up, your notes in your hand.]{.qr-tagline}
+
+::: {.qr-buttons}
+[Get the extension](extension.qmd){.btn .btn-primary}
+[The apps](apps.qmd){.btn .btn-outline-primary}
+[Try the demo](demo.qmd){.btn .btn-outline-secondary}
+:::
+:::
+
+::: {.qr-shots}
+![](images/watch-countdown.png){.qr-watch fig-alt="Apple Watch: countdown of the current slide, with its title, and Back / Next buttons"}
+
+::: {.light-content}
+![](images/iphone-remote-light.png){.qr-phone fig-alt="iPhone: countdown, slide title, speaker notes, next slide, Back / Next buttons"}
+:::
+
+::: {.dark-content}
+![](images/iphone-remote-dark.png){.qr-phone fig-alt="iPhone: countdown, slide title, speaker notes, next slide, Back / Next buttons"}
+:::
+
+![](images/watch-timesup.png){.qr-watch fig-alt="Apple Watch: time's up, the ring and the number turn red"}
+:::
+
+## Three parts, one remote
+
+::: {.qr-cards}
+::: {.qr-card}
+<i class="bi bi-filetype-md qr-icon" aria-hidden="true"></i>
+
+### Quarto extension
+
+Give each slide a time (or not). A countdown in the speaker view, pause and reset keys. Free and open source.
+
+[The extension →](extension.qmd)
+:::
+
+::: {.qr-card}
+<i class="bi bi-phone qr-icon" aria-hidden="true"></i>
+
+### iPhone & Apple Watch
+
+Next and back, your notes, the countdown, and whether you are ahead of schedule. The watch buzzes when time is up.
+
+[The apps →](apps.qmd#iphone)
+:::
+
+::: {.qr-card}
+<i class="bi bi-laptop qr-icon" aria-hidden="true"></i>
+
+### QRemote Relay for Mac
+
+Lives in the menu bar and links the presentation open in your browser to your remotes. Nothing to configure.
+
+[QRemote Relay →](apps.qmd#qremote-relay-mac)
+:::
+:::
+
+## How it works
+
+::: {.qr-steps}
+1. **Add the extension** to your presentation: `quarto add Nenuial/quarto-qremote`, then `revealjs-plugins: [qremote]` in the YAML header. Give slides a time if you like: `## My slide {timing="45"}`.
+2. **Open QRemote Relay** on the Mac that shows the presentation, then open the rendered presentation in your browser. It connects on its own.
+3. **Open QRemote** on your iPhone: it finds your Mac. Your Apple Watch uses the iPhone's settings. Go!
+:::
+
+```
+ iPhone / Apple Watch  ──▶  QRemote Relay (menu bar)  ◀──  presentation (browser, same Mac)
+                             local network only
+```
+
+## Made for timed talks
+
+Pitches, PechaKucha, lessons, conference talks: anywhere the clock matters. Each slide can have its own time; slides without one simply show how long you have spent on them. The speaker view shows where you should be by the end of each slide, and the iPhone shows whether you are ahead of or behind schedule.
+
+No account, no cloud, no data collected: everything stays on your local network. [Privacy](privacy.qmd).
+
+::: {.qr-note}
+The iPhone, Apple Watch and Mac apps are coming soon to the App Store. The Quarto extension works on its own today, as a speaker-view timer.
+:::

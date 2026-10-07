@@ -1,0 +1,52 @@
+---
+title: "Politique de confidentialité"
+description: "QRemote, QRemote Relay et l'extension qremote ne collectent aucune donnée."
+lang: fr
+date: 2026-10-07
+date-format: "D MMMM YYYY"
+date-meta: 2026-10-07
+toc: false
+---
+
+[English version](privacy.qmd)
+
+Cette politique concerne l'app **QRemote** pour iPhone et Apple Watch, l'app **QRemote Relay** pour Mac, l'extension Quarto **qremote** et ce site, qremote.nenuial.org. Ils sont réalisés par Pascal Burkhard, responsable de cette politique.
+
+## En bref
+
+QRemote, QRemote Relay et l'extension qremote **ne collectent aucune donnée personnelle**. Il n'y a ni compte, ni statistiques d'utilisation, ni publicité, ni pistage. Tout ce qu'ils échangent reste sur tes appareils et ton réseau local, et rien n'est envoyé ni à nous ni à qui que ce soit.
+
+## Les apps et l'extension
+
+**Sur ton réseau local.** Les apps iPhone et Apple Watch communiquent uniquement avec QRemote Relay sur ton propre Mac, par ton réseau local, et QRemote Relay communique uniquement avec la présentation ouverte dans un navigateur sur ce même Mac. Elles échangent :
+
+- l'état de la présentation : numéro de slide, durées, titres de la présentation et des slides, notes d'orateur ;
+- tes commandes : suivante, précédente, pause, remise à zéro.
+
+Ces informations ne sont pas conservées et ne quittent jamais ton réseau local.
+
+**Sur tes appareils.** Les apps gardent leurs réglages sur tes appareils : le nom et les adresses réseau de ton Mac, le code PIN facultatif et ta préférence de vibration. L'iPhone transmet ces réglages à ton Apple Watch. Supprimer les apps les supprime.
+
+**Accès au réseau local.** iOS et macOS te demandent l'autorisation avant que les apps utilisent le réseau local. Il ne sert qu'à trouver QRemote Relay et à communiquer avec elle.
+
+**App Store.** Apple fournit l'App Store, TestFlight et leurs statistiques selon sa propre [politique de confidentialité](https://www.apple.com/chfr/legal/privacy/). Si tu l'autorises dans les réglages de ton appareil, Apple peut transmettre aux développeurs des rapports de plantage et des statistiques d'utilisation anonymes ; ils ne contiennent aucune donnée personnelle.
+
+## Ce site
+
+Ce site est un ensemble de pages statiques servies depuis notre propre serveur web. Il ne dépose **aucun cookie**, n'utilise **aucun outil de statistiques** et ne charge **rien depuis d'autres sites** (ni polices web, ni scripts, ni contenu intégré).
+
+Comme tout serveur web, il peut tenir des journaux techniques d'accès (adresse IP, date et heure, page demandée, navigateur) pour faire fonctionner et protéger le site. Ces journaux ne servent à rien d'autre et ne sont pas partagés.
+
+Les liens vers d'autres sites, comme GitHub ou l'App Store, relèvent de leurs propres politiques.
+
+## Tes droits
+
+Comme les apps et l'extension ne détiennent aucune donnée personnelle te concernant, il n'y a rien à consulter, à corriger ou à supprimer. Pour toute question sur cette politique ou sur les journaux du site, contacte-nous ci-dessous.
+
+## Modifications
+
+Si cette politique change, la nouvelle version sera publiée sur cette page avec sa date.
+
+## Contact
+
+Pascal Burkhard : [ouvrir une issue sur GitHub](https://github.com/Nenuial/quarto-qremote/issues).

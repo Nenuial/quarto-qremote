@@ -4,3 +4,7 @@
 /.quarto/
 
 .DS_Store
+
+# Website output
+site/_site/
+site/.quarto/

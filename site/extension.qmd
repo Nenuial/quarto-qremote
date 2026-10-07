@@ -1,0 +1,118 @@
+---
+title: "Quarto extension"
+description: "Per-slide timing, a countdown in the speaker view, and remote control for Quarto reveal.js presentations."
+---
+
+The `qremote` extension adds to any [Quarto](https://quarto.org) [reveal.js](https://quarto.org/docs/presentations/revealjs/) presentation:
+
+- **a time for each slide**, if you want one;
+- **a countdown in the speaker view** (<kbd>S</kbd>), with a progress bar that turns red when time is up and where you should be by the end of the slide;
+- **pause and reset keys**, for rehearsals;
+- **the link to [the QRemote apps](apps.qmd)**, to drive the presentation from your iPhone and Apple Watch.
+
+Nothing is shown to the audience. The extension is free and open source ([MIT license](https://github.com/Nenuial/quarto-qremote/blob/main/LICENSE)), and works on its own as a speaker-view timer. [Try it in the demo](demo.qmd).
+
+## Install
+
+In the folder of your presentation (or of your Quarto project):
+
+```bash
+quarto add Nenuial/quarto-qremote
+```
+
+Or start a new presentation from the example:
+
+```bash
+quarto use template Nenuial/quarto-qremote
+```
+
+::: {.callout-tip}
+## From the Mac app
+QRemote Relay can also install the extension: menu › **Install Quarto extension…**, then choose the presentation's folder. Running it again updates the extension.
+:::
+
+Then enable it in the presentation's YAML header:
+
+```yaml
+format:
+  revealjs:
+    revealjs-plugins: [qremote]
+```
+
+## Time your slides
+
+Add a `timing` attribute to a slide's title:
+
+```markdown
+## Why it matters {timing="45"}
+
+## The plan {timing="1:30"}
+
+## Questions
+```
+
+- `timing` accepts seconds (`45`, `45s`) or minutes (`1:30`, `2m`, `1m30s`). It is reveal.js's own `data-timing` attribute, so `{data-timing="45"}` works too.
+- **Slides without a timing count up**: the speaker view and the remotes show the time spent on the slide, with no countdown and no buzz. To give every slide a default time, set `default-timing` (below).
+- The **title slide**, and any slide with the class `.standby`, is not timed: the presentation clock starts when you leave it.
+
+## Keyboard
+
+| Key | Effect |
+|---|---|
+| <kbd>S</kbd> | Speaker view, with the slide countdown under reveal.js's clock |
+| <kbd>P</kbd> | Pause / resume the slide countdown (instead of reveal.js's "previous slide") |
+| <kbd>R</kbd> | Reset: the total clock and the current slide start over |
+
+Clicking reveal.js's clock in the speaker view ("Click to Reset") also restarts the current slide. The speaker view's labels are in English or French, following the document's `lang`.
+
+## Options
+
+All optional, at the top level of the YAML header:
+
+```yaml
+qremote:
+  default-timing: 30              # seconds (or "m:ss") for slides without `timing`
+  relay: "http://localhost:8765"  # where QRemote Relay listens; false: no remote control
+  title-slide-standby: true       # false: the title slide is timed like the others
+  speaker-view: true              # false: no countdown in the speaker view
+```
+
+| Option | Default | |
+|---|---|---|
+| `default-timing` | none | Time for slides without `timing`. Unset: those slides count up. |
+| `relay` | `http://localhost:8765` | Address of [QRemote Relay](apps.qmd#qremote-relay-mac). `false` turns remote control off. |
+| `title-slide-standby` | `true` | The title slide is not timed; the clock starts when you leave it. |
+| `speaker-view` | `true` | Shows the countdown in the speaker view. |
+
+### Colors
+
+The countdown uses your theme's link color, and red when time is up. To change them:
+
+```scss
+/*-- scss:rules --*/
+:root {
+  --qremote-accent: #c4a7e7;
+  --qremote-warn: #eb6f92;
+}
+```
+
+## Update
+
+```bash
+quarto update extension Nenuial/quarto-qremote
+```
+
+## For developers: the relay protocol
+
+QRemote Relay is a small HTTP server on port 8765; you can write your own remote. The presentation:
+
+- posts its state to `POST /state` (JSON sent as `text/plain`) on every change and every 3 seconds;
+- receives commands as Server-Sent Events from `GET /events?client=<id>`: `{"cmd": "next" | "prev" | "pause" | "reset"}`.
+
+Remotes read `GET /state` and send `POST /cmd/next`, `/cmd/prev`, `/cmd/pause` or `/cmd/reset`; the relay answers with the new state once the presentation has moved. Presentation endpoints only accept requests from the Mac itself; remote endpoints require the PIN in an `X-Token` header when the PIN is on.
+
+State fields: `index`, `total`, `duration` (seconds; `0` = untimed), `elapsed`, `paused`, `standby`, `totalElapsed`, `plannedEnd`, `plannedTotal`, `fragment`, `fragments`, `title`, `slideTitle`, `nextTitle`, `notes`.
+
+## Troubleshooting
+
+See [Support](support.qmd#quarto).
