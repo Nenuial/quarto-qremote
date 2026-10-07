@@ -3,7 +3,7 @@ title: "Support"
 description: "Help with QRemote, QRemote Relay and the qremote Quarto extension."
 ---
 
-Something does not work, or you have an idea? [Open an issue on GitHub](https://github.com/Nenuial/quarto-qremote/issues). Please mention your devices and their system versions (iPhone, Apple Watch, Mac), and your Quarto version (`quarto --version`).
+Something does not work, or you have an idea? Write to [qremote@nenuial.org](mailto:qremote@nenuial.org), or [open an issue on GitHub](https://github.com/Nenuial/quarto-qremote/issues). Please mention your devices and their system versions (iPhone, Apple Watch, Mac), and your Quarto version (`quarto --version`).
 
 ## Connection
 

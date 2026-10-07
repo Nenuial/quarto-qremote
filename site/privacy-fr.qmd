@@ -49,4 +49,4 @@ Si cette politique change, la nouvelle version sera publiée sur cette page avec
 
 ## Contact
 
-Pascal Burkhard : [ouvrir une issue sur GitHub](https://github.com/Nenuial/quarto-qremote/issues).
+Pascal Burkhard : [qremote@nenuial.org](mailto:qremote@nenuial.org), ou [ouvrir une issue sur GitHub](https://github.com/Nenuial/quarto-qremote/issues).
