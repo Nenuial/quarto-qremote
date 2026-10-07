@@ -75,9 +75,17 @@ Lives in the menu bar and links the presentation open in your browser to your re
 3. **Open QRemote** on your iPhone: it finds your Mac. Your Apple Watch uses the iPhone's settings. Go!
 :::
 
-```
- iPhone / Apple Watch  ──▶  QRemote Relay (menu bar)  ◀──  presentation (browser, same Mac)
-                             local network only
+```{=html}
+<figure class="qr-flow" aria-label="The iPhone and Apple Watch talk to QRemote Relay on the Mac, which talks to the presentation in the browser on the same Mac, over the local network only">
+  <div class="qr-flow-row">
+    <div class="qr-node"><i class="bi bi-phone" aria-hidden="true"></i><strong>iPhone</strong><span>Apple Watch</span></div>
+    <i class="bi bi-arrow-left-right qr-arrow" aria-hidden="true"></i>
+    <div class="qr-node qr-node-relay"><i class="bi bi-laptop" aria-hidden="true"></i><strong>QRemote Relay</strong><span>menu bar of your Mac</span></div>
+    <i class="bi bi-arrow-left-right qr-arrow" aria-hidden="true"></i>
+    <div class="qr-node"><i class="bi bi-easel" aria-hidden="true"></i><strong>Presentation</strong><span>browser, same Mac</span></div>
+  </div>
+  <figcaption><i class="bi bi-house-lock" aria-hidden="true"></i> Local network only: nothing goes to the internet</figcaption>
+</figure>
 ```
 
 ## Made for timed talks

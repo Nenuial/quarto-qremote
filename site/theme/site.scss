@@ -82,3 +82,31 @@ kbd {
   padding: 0.05rem 0.4rem;
   font-size: 0.85em;
 }
+
+// "How it works" diagram: remotes ⇄ relay ⇄ presentation
+.qr-flow { margin: 1.75rem 0 2rem; }
+.qr-flow-row { display: flex; align-items: center; justify-content: center; gap: 0.9rem; }
+.qr-node {
+  flex: 1 1 0;
+  max-width: 13rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+  padding: 1rem 0.75rem;
+  background: var(--qr-surface);
+  border: 1px solid var(--qr-line);
+  border-radius: 16px;
+  text-align: center;
+  line-height: 1.25;
+}
+.qr-node i { font-size: 1.6rem; color: var(--qr-iris); margin-bottom: 0.3rem; }
+.qr-node span { font-size: 0.85rem; color: var(--qr-subtle); }
+.qr-node-relay { border-color: var(--qr-iris); }
+.qr-arrow { font-size: 1.4rem; color: var(--qr-subtle); flex: none; }
+.qr-flow figcaption { text-align: center; margin-top: 0.9rem; font-size: 0.9rem; color: var(--qr-subtle); }
+@media (max-width: 575.98px) {
+  .qr-flow-row { flex-direction: column; }
+  .qr-node { width: 100%; max-width: 16rem; }
+  .qr-arrow { transform: rotate(90deg); }
+}
+
+// Plain code blocks follow the theme's text color (dark mode)
+pre, pre code { color: #{$rp-text}; }
