@@ -1,6 +1,6 @@
 title: QRemote
 author: Pascal Burkhard
-version: 1.0.1
+version: 1.0.2
 quarto-required: ">=1.4.0"
 contributes:
   revealjs-plugins:
@@ -18,3 +18,5 @@ contributes:
           title-slide-standby: true
           # Countdown in the speaker view (S key)
           speaker-view: true
+source: nenuial/qremote
+source-type: github
