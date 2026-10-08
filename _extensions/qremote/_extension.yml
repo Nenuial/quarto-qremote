@@ -18,5 +18,5 @@ contributes:
           title-slide-standby: true
           # Countdown in the speaker view (S key)
           speaker-view: true
-source: nenuial/qremote
+source: Nenuial/quarto-qremote
 source-type: github
