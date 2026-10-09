@@ -33,8 +33,28 @@
 }
 .qr-hero .qr-tagline {
   display: block; font-size: 1.25rem; color: var(--qr-subtle); max-width: 40rem; margin: 0 auto 1.5rem; }
-.qr-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+// The links sit in a <p> inside the div: lay out that paragraph, so the gap also applies when they wrap
+.qr-buttons > p { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin: 0; }
 .qr-buttons a.btn { border-radius: 999px; padding: 0.5rem 1.25rem; font-weight: 600; }
+
+// Official "Download on the App Store" badge (Apple: at least 40px high, clear space around it)
+a.qr-badge { display: inline-block; line-height: 0; flex: none; }
+a.qr-badge img { height: 48px; width: auto; }
+.qr-hero-badge { margin-top: 1.5rem; }
+
+// "Get the app" insert: icon, name, badge
+.qr-store {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  margin: 1.5rem 0 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--qr-surface);
+  border: 1px solid var(--qr-line);
+  border-radius: 16px;
+}
+.qr-store-icon { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+.qr-store-text { flex: 1 1 10rem; display: flex; flex-direction: column; line-height: 1.3; }
+.qr-store-text strong { font-size: 1.1rem; }
+.qr-store-text span { font-size: 0.9rem; color: var(--qr-subtle); }
 
 // Cards (three parts, features)
 .qr-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }

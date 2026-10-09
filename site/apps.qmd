@@ -3,8 +3,19 @@ title: "The apps"
 description: "QRemote for iPhone and Apple Watch, and QRemote Relay for Mac."
 ---
 
+```{=html}
+<div class="qr-store">
+  <img src="images/logo.png" alt="" class="qr-store-icon">
+  <div class="qr-store-text">
+    <strong>QRemote for Quarto</strong>
+    <span>iPhone and Apple Watch · Free</span>
+  </div>
+  <a href="https://apps.apple.com/app/id6819984818" class="qr-badge"><img src="images/app-store-badge-black.svg" alt="Download on the App Store"></a>
+</div>
+```
+
 ::: {.qr-note}
-Coming soon to the App Store.
+QRemote Relay for Mac is coming soon to the App Store.
 :::
 
 | App | Runs on | Does |

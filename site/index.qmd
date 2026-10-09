@@ -17,6 +17,10 @@ page-layout: article
 [The apps](apps.qmd){.btn .btn-outline-primary}
 [Try the demo](demo.qmd){.btn .btn-outline-secondary}
 :::
+
+```{=html}
+<a href="https://apps.apple.com/app/id6819984818" class="qr-badge qr-hero-badge"><img src="images/app-store-badge-black.svg" alt="Download on the App Store"></a>
+```
 :::
 
 ::: {.qr-shots}
@@ -90,10 +94,21 @@ Lives in the menu bar and links the presentation open in your browser to your re
 
 ## Made for timed talks
 
-Pitches, PechaKucha, lessons, conference talks: anywhere the clock matters. Each slide can have its own time; slides without one simply show how long you have spent on them. The speaker view shows where you should be by the end of each slide, and the iPhone shows whether you are ahead of or behind schedule.
+Pitches, lessons, conference talks: anywhere the clock matters. Each slide can have its own time; slides without one simply show how long you have spent on them. The speaker view shows where you should be by the end of each slide, and the iPhone shows whether you are ahead of or behind schedule.
 
 No account, no cloud, no data collected: everything stays on your local network. [Privacy](privacy.qmd).
 
+```{=html}
+<div class="qr-store">
+  <img src="images/logo.png" alt="" class="qr-store-icon">
+  <div class="qr-store-text">
+    <strong>QRemote for Quarto</strong>
+    <span>iPhone and Apple Watch · Free</span>
+  </div>
+  <a href="https://apps.apple.com/app/id6819984818" class="qr-badge"><img src="images/app-store-badge-black.svg" alt="Download on the App Store"></a>
+</div>
+```
+
 ::: {.qr-note}
-The iPhone, Apple Watch and Mac apps are coming soon to the App Store. The Quarto extension works on its own today, as a speaker-view timer.
+QRemote Relay for Mac is coming soon to the App Store. The Quarto extension works on its own today, as a speaker-view timer.
 :::
