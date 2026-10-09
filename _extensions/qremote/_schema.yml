@@ -1,0 +1,40 @@
+# _schema.yml for the "qremote" revealjs-plugin extension
+# Describes the plugin's options for IDE tooling (Quarto Wizard) and validation.
+
+# Plugin options, set in the document front matter (or _quarto.yml) with:
+#   revealjs-plugins: [qremote]
+#   qremote:
+#     default-timing: 30
+
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v2/extension-schema.json
+
+options:
+  relay:
+    type: [string, boolean]
+    default: "http://localhost:8765"
+    description: "Address of the QRemote Relay Mac app. Set to false to turn remote control off."
+  default-timing:
+    type: [number, string, "null"]
+    default: null
+    description: "Time for slides without a `timing` attribute: seconds (`45`) or `m:ss` (`1:30`). Unset: those slides count up instead of down."
+  title-slide-standby:
+    type: boolean
+    default: true
+    description: "The title slide is not timed: the presentation clock starts when you leave it."
+  speaker-view:
+    type: boolean
+    default: true
+    description: "Show the countdown in the speaker view (S key)."
+
+attributes:
+  Header:
+    timing:
+      type: string
+      pattern: "^(\\d+:\\d{1,2}|\\d+(\\.\\d+)?[mM](\\s*\\d+(\\.\\d+)?[sS]?)?|\\d+(\\.\\d+)?[sS]?)$"
+      aliases: [data-timing]
+      description: "Time for this slide: seconds (`45`, `45s`) or minutes (`1:30`, `2m`, `1m30s`)."
+      examples: ["45", "1:30", "2m"]
+
+classes:
+  standby:
+    description: "Slide not timed, like the title slide: the presentation clock starts when you leave it."

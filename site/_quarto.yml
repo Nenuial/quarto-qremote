@@ -3,6 +3,8 @@
 #   quarto render       → _site/, a static site: upload its contents to the web server
 project:
   type: website
+  # Copies ../_extensions here (see the script)
+  pre-render: _scripts/copy-extension.py
 
 website:
   title: "QRemote"

@@ -28,7 +28,9 @@ The App Store records link to these pages, so keep their addresses stable:
 
 ## Notes
 
-- `_extensions` is a link to the repository's `_extensions/`, so the demo uses the current extension.
+- `_extensions/` is copied from the repository's `_extensions/` before each render
+  (`_scripts/copy-extension.py`), so the demo uses the current extension. It is not checked in, and
+  must not be a symbolic link: Quarto Wizard refuses to install from an archive that contains one.
   The demo has `relay: false`: on a public page, a link to `localhost` would make browsers ask for
   local network access.
 - The site loads nothing from other servers (no web fonts, no CDN, no analytics), as the privacy
